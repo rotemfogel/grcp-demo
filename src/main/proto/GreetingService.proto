@@ -1,0 +1,16 @@
+syntax = "proto3";
+package me.rotemfo.grpc;
+
+// Request payload
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string greeting = 1;
+}
+
+service GreetingService {
+  // Define a RPC operation
+  rpc greeting(HelloRequest) returns (HelloResponse);
+}
